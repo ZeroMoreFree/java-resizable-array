@@ -36,9 +36,9 @@ public class ResizableArray {
 
         
         byteBuffer.get(this.sharedArray, this.offset + this.length, remaining);
-        this.length += bytesToCopy;
+        this.length += remaining;
 
-        return bytesToCopy;
+        return remaining;
     }
 
     public void free() {
